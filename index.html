@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Decodificador</title>
+  <link rel="shortcut icon" href="./assets/img-decodificador.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="index.html"><img src="./assets/logo-alura.svg" alt="Logo da Alura"></a>
+    <!-- <h1>Decodificador de texto</h1> -->
+  </header>
+  
+  <main class="principal">
+    <section class="principal__entrada">
+      <!-- <h2>Digite seu texto:</h2> -->
+      <textarea class="principal__entrada__texto" name="texto-entrada" rows="12" placeholder="Digite seu texto" type="text" pattern="[a-z]"></textarea>
+      <div class="principal__entrada__textos">
+        <p><img src="./assets/bi_exclamation-circle-fill.svg"> Apenas letras minúsculas e sem acento.</p>
+        <div class="principal__entrada__botoes">
+          <button class="principal__entrada__botoes__botao" type="button" data-criptografar>Criptografar</button>
+          <button class="principal__entrada__botoes__botao botao__secundario" type="button" data-descriptografar>Descriptografar</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="principal__saida">
+      <section class="principal__saida__container">
+        <img src="./assets/img-decodificador.svg">
+        <div class="principal__saida__container__textos">
+          <h3 class="principal__saida__container__msg">Nenhuma mensagem encontrada</h3>
+          <p class="principal__saida__container__msginfo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+      </section>
+      <section class="principal__saida__conteudo">
+        <textarea class="principal__entrada__texto saida__texto" name="texto-saida" rows="18" disabled></textarea>
+        <button class="principal__entrada__botoes__botao botao__secundario" type="button" data-copiar>Copiar</button>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <p class="principal__saida__container__msginfo">Desenvolvido por <a href="https://github.com/ketijor">Keti Jorgensen</a> • 2024</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
